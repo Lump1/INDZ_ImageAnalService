@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model WebApplication1.Models.ImageModelView
+
+<script>
+    function onSubmit() {
+        const para = document.createElement("p");
+        const node = document.createTextNode("Wait a moment...");
+        para.appendChild(node);
+
+        para.classList.add("text-white-50");
+
+        const element = document.getElementById("waitingCard");
+        element.appendChild(para);
+    }
+</script>
+
+<div class="text-center">
+    <h1 class="display-4">IImages</h1>
+
+    <form method="post" enctype="multipart/form-data" asp-action="Upload">
+        <div class="form-group">
+            <label for="image">Select an image to upload:</label>
+            <input type="file" name="image" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="onSubmit()">Upload</button>
+    </form>
+
+    <img src="@Model.Url" />
+    <br /><br />
+    <p>@Model.Description</p>
+
+    <div class="card" style="background-color: gray; width: fit-content;" id="waitingCard">
+    </div>
+</div>
