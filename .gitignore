@@ -7,3 +7,17 @@
 /.vs/WebApplication1/FileContentIndex/70c154a1-b8c0-49ac-8a2d-776f44b009da.vsidx
 /.vs/WebApplication1/FileContentIndex/962661c8-99d5-47ad-9eb6-2bba043ec567.vsidx
 /.vs/WebApplication1/FileContentIndex/read.lock
+*.vsidx
+/WebApplication1/obj/Debug/net6.0/project.razor.vs.json
+/WebApplication1/obj/Debug/net6.0/WebApplication1.AssemblyInfo.cs
+/WebApplication1/obj/WebApplication1.csproj.nuget.g.props
+/WebApplication1/obj/WebApplication1.csproj.nuget.dgspec.json
+/WebApplication1/obj/project.nuget.cache
+/WebApplication1/obj/project.assets.json
+/WebApplication1/obj/Debug/net6.0/WebApplication1.RazorAssemblyInfo.cs
+/WebApplication1/obj/Debug/net6.0/WebApplication1.RazorAssemblyInfo.cache
+/WebApplication1/obj/Debug/net6.0/WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+/WebApplication1/obj/Debug/net6.0/WebApplication1.csproj.AssemblyReference.cache
+/WebApplication1/obj/Debug/net6.0/WebApplication1.assets.cache
+/WebApplication1/obj/Debug/net6.0/WebApplication1.AssemblyInfoInputs.cache
+*.lock
