@@ -12,10 +12,8 @@ namespace WebApplication1.Data
             BlobClient blobClient,
             string storedPolicyName = null)
         {
-            // Check if BlobContainerClient object has been authorized with Shared Key
             if (blobClient.CanGenerateSasUri)
             {
-                // Create a SAS token that's valid for one day
                 BlobSasBuilder sasBuilder = new BlobSasBuilder()
                 {
                     BlobContainerName = blobClient.GetParentBlobContainerClient().Name,
@@ -39,28 +37,19 @@ namespace WebApplication1.Data
             }
             else
             {
-                // Client object is not authorized via Shared Key
                 return null;
             }
         }
 
-        //public static async Task<IEnumerable<Data.CosmosDb.Image>> Search(
-        //    string inputedRes, 
-        //    int page, 
-        //    CosmosDb.CosmosDbContext _context)
-        //{
-        //    var inputedResArr = inputedRes.Split(' ');
-        //    var imgList = await _context.Images.ToListAsync();
-        //    var imgEnumerator = imgList.Where(image => {
-        //        for (int i = 0; i < inputedResArr.Length; i++)
-        //            if (image.Tags.Contains(inputedRes[i]))
-        //                return true;
+        public static async Task BlobUploadAsync(BlobClient client, IFormFile image)
+        {
+            if (!client.Exists())
+                using (var stream = new MemoryStream())
+                {
+                    await image.CopyToAsync(stream);
 
-        //        return false;
-        //    });
-
-
-        //    return imgEnumerator;
-        //}
+                    await client.UploadAsync(new BinaryData(stream.ToArray()));
+                }
+        }
     }
 }

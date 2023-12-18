@@ -1,4 +1,5 @@
-﻿using Microsoft.Azure.CognitiveServices.Vision.ComputerVision;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.CognitiveServices.Vision.ComputerVision;
 using Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models;
 
 namespace WebApplication1.Data
