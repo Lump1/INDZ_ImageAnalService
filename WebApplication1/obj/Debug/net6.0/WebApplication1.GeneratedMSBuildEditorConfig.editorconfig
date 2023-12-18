@@ -9,43 +9,41 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApplication1
 build_property.RootNamespace = WebApplication1
-build_property.ProjectDir = D:\project\analservice\WebApplication1\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\ASUS\Source\Repos\INDZ_ImageAnalService\WebApplication1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\project\analservice\WebApplication1
+build_property.MSBuildProjectDirectory = C:\Users\ASUS\Source\Repos\INDZ_ImageAnalService\WebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/project/analservice/WebApplication1/Views/Home/Index.cshtml]
+[C:/Users/ASUS/source/repos/INDZ_ImageAnalService/WebApplication1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/project/analservice/WebApplication1/Views/Search/Result.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXFJlc3VsdC5jc2h0bWw=
+[C:/Users/ASUS/source/repos/INDZ_ImageAnalService/WebApplication1/Views/Home/Result.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXN1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/project/analservice/WebApplication1/Views/Search/Search.cshtml]
+[C:/Users/ASUS/source/repos/INDZ_ImageAnalService/WebApplication1/Views/Search/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXFNlYXJjaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/project/analservice/WebApplication1/Views/Shared/Error.cshtml]
+[C:/Users/ASUS/source/repos/INDZ_ImageAnalService/WebApplication1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/project/analservice/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ASUS/source/repos/INDZ_ImageAnalService/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/project/analservice/WebApplication1/Views/_ViewImports.cshtml]
+[C:/Users/ASUS/source/repos/INDZ_ImageAnalService/WebApplication1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/project/analservice/WebApplication1/Views/_ViewStart.cshtml]
+[C:/Users/ASUS/source/repos/INDZ_ImageAnalService/WebApplication1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/project/analservice/WebApplication1/Views/Shared/_Layout.cshtml]
+[C:/Users/ASUS/source/repos/INDZ_ImageAnalService/WebApplication1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-bddmc6yalx

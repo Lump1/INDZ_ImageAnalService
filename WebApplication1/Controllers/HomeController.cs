@@ -81,7 +81,10 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-
+        public ViewResult Result()
+        {
+            return View("Result");
+        }
 
         [HttpPost]
         public async Task<IActionResult> Upload(IFormFile image)
@@ -127,7 +130,7 @@ namespace WebApplication1.Controllers
                 await _context.Images.AddAsync(new Data.CosmosDb.Image(image.FileName, tags));
                 await _context.SaveChangesAsync();
 
-                return View("Index", new ImageModelView(url, analys.Description.Captions.First().Text, TagsAndConfidence));
+                return View("Result", new ImageModelView(url, analys.Description.Captions.First().Text, TagsAndConfidence));
 
             }
             else

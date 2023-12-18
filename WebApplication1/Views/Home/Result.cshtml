@@ -1,0 +1,33 @@
+﻿@{
+	ViewData["Title"] = "Privacy Policy";
+}
+
+@model WebApplication1.Models.ImageModelView
+
+<div class="result-wrapper">
+	<div class="result-content">
+		<img id="result-image" src="@Model.Url" />
+		<div class="sidebar">
+			<h1>This is a <span class="marked">@Model.MaxTag</span></h1>
+			<p>Other guesses:</p>
+			<div class="guesses-container">
+				@foreach (var item in Model.TagsAndConfidence)
+				{
+					<div class="guess-wrapper">
+						<div class="guess-container">
+							<span>@item.Key</span>
+							<div class="guess" style="width: @(Math.Floor(item.Value * 100))%;"></div>
+						</div>
+					</div>
+				}
+
+			</div>
+			<div class="copy">
+				<p>@Model.Url</p>
+@*				<button>
+					<img src="@Model.Url" alt="" />
+				</button>*@
+			</div>
+		</div>
+	</div>
+</div>

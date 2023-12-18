@@ -4,11 +4,15 @@
 
 @model WebApplication1.Models.ImageModelView
 
+<form enctype="multipart/form-data" method="post" asp-action="Upload">
+    <input type="file" name="image">
+    <button type="submit">Submit</button>
+</form>
+
 <div id="modal" onclick="hideModal()">
-    <form>
-        <input type="file" />
-    </form>
+
 </div>
+
 <div id="backdrop" onclick="showModal()"></div>
 
 
