@@ -68,6 +68,11 @@ namespace WebApplication1.Controllers
             return View("Search", new WebApplication1.Models.SearchModel(SelectUrls(imagesName)));
         }
 
+        public ViewResult Result()
+        {
+            return View("Result");
+        }
+
 
 		private IEnumerable<string> SelectUrls(IEnumerable<string> names)
 		{
