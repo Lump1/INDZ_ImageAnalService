@@ -71,6 +71,9 @@
           }
         }
       },
+      "jQuery.filedrop/1.0.1": {
+        "type": "package"
+      },
       "Microsoft.Azure.CognitiveServices.Vision.ComputerVision/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -2108,6 +2111,18 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "jQuery.filedrop/1.0.1": {
+      "sha512": "onEhmpyJp0wkNMSBTyoF/BD0Fl+7YwXRUXfXD74cbXAzVy7zSMo9XmbtnSBwteOgimzmoZGhywfzx91AUBM28g==",
+      "type": "package",
+      "path": "jquery.filedrop/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Scripts/jquery.filedrop.js",
+        "jquery.filedrop.1.0.1.nupkg.sha512",
+        "jquery.filedrop.nuspec"
       ]
     },
     "Microsoft.Azure.CognitiveServices.Vision.ComputerVision/7.0.1": {
@@ -6347,23 +6362,29 @@
       "Microsoft.EntityFrameworkCore >= 6.0.25",
       "Microsoft.EntityFrameworkCore.Cosmos >= 6.0.25",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.25",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "jQuery.filedrop >= 1.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
+    "C:\\Users\\Vitalii\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\Azure\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "D:\\project\\analservice\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\ASUS\\source\\repos\\Azure\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\source\\repos\\Azure\\WebApplication1\\WebApplication1\\obj\\",
+      "projectPath": "D:\\project\\analservice\\WebApplication1\\WebApplication1.csproj",
+      "packagesPath": "C:\\Users\\Vitalii\\.nuget\\packages\\",
+      "outputPath": "D:\\project\\analservice\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vitalii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6418,6 +6439,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "jQuery.filedrop": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           }
         },
         "imports": [
@@ -6439,7 +6464,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
