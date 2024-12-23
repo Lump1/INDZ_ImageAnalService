@@ -1,0 +1,7 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/WebApplication1/bin/Debug/net6.0/appsettings.json
+/WebApplication1/bin/Debug/net6.0/WebApplication1.dll
+/.vs
