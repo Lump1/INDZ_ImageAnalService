@@ -52,7 +52,15 @@ namespace WebApplication1.Controllers
 
             BlobServiceClient = new BlobServiceClient(azureKeys.BLOB_SERVICE_KEY);
             BlobContainerClient = BlobServiceClient.GetBlobContainerClient("home");
-            BlobContainerClient.CreateIfNotExistsAsync().Wait();
+            try
+            {
+                BlobContainerClient.CreateIfNotExistsAsync().Wait();
+            }
+            catch
+            {
+                logger.LogCritical("Blob wasn't created");
+            }
+            
 
             comVisKey = azureKeys.COMPUTER_VISION_KEY;
 
@@ -65,8 +73,16 @@ namespace WebApplication1.Controllers
 
         public static async void _init(CosmosDbContext _context)
         {
-			var lastItem = await _context.Images.OrderBy(image => image.Id).LastAsync();
-			Data.CosmosDb.Image._init(lastItem.Id);
+            try
+            {
+                var lastItem = await _context.Images.OrderBy(image => image.Id).LastAsync();
+                Data.CosmosDb.Image._init(lastItem.Id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+			
 		}
 
         public IActionResult Index()

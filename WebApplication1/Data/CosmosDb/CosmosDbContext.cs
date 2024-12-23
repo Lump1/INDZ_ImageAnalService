@@ -8,7 +8,15 @@ namespace WebApplication1.Data.CosmosDb
 
         public CosmosDbContext()
         {
-            Database.EnsureCreated();
+            try
+            {
+                Database.EnsureCreated();
+            }
+            catch (Exception ex) 
+            { 
+                Console.WriteLine(ex.ToString());
+            }
+            
         }
 
 
