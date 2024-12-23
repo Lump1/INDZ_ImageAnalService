@@ -20,12 +20,12 @@ namespace WebApplication1.Controllers
         private Data.CosmosDb.CosmosDbContext _context;
 
 
-        public SearchController(ILogger<SearchController> logger, IWebHostEnvironment env)
+        public SearchController(ILogger<SearchController> logger, IWebHostEnvironment env, AzureKeys azureKeys)
         {
             _logger = logger;
             _env = env;
 
-            BlobServiceClient = new BlobServiceClient("DefaultEndpointsProtocol=https;AccountName=gureev;AccountKey=ZiS2bpWpXNqxvUbun2GFYi1AEVCZxDwaokAFcH3VjPZmRUOopJJgeTBRJ79alAKMSfd/s4ZiDJUQ+AStMIlH+g==;EndpointSuffix=core.windows.net");
+            BlobServiceClient = new BlobServiceClient(azureKeys.BLOB_SERVICE_KEY);
             BlobContainerClient = BlobServiceClient.GetBlobContainerClient("home");
 
             _context = new Data.CosmosDb.CosmosDbContext();

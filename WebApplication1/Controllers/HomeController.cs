@@ -33,8 +33,9 @@ namespace WebApplication1.Controllers
 
         private readonly ILogger<HomeController> _logger;
         private readonly IWebHostEnvironment _env;
+        private readonly AzureKeys _azureKeys;
 
-        private string comVisKey = "d1e0d09e976c41dd8d88906e2f90b767";
+        private string comVisKey;
         private string comVisUrl = "https://comvisiongur.cognitiveservices.azure.com/";
 
         private BlobServiceClient BlobServiceClient;
@@ -44,14 +45,16 @@ namespace WebApplication1.Controllers
         private Data.CosmosDb.CosmosDbContext _context;
 
 
-        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment env)
+        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment env, AzureKeys azureKeys)
         {
             _logger = logger;
             _env = env;
 
-            BlobServiceClient = new BlobServiceClient("DefaultEndpointsProtocol=https;AccountName=gureev;AccountKey=ZiS2bpWpXNqxvUbun2GFYi1AEVCZxDwaokAFcH3VjPZmRUOopJJgeTBRJ79alAKMSfd/s4ZiDJUQ+AStMIlH+g==;EndpointSuffix=core.windows.net");
+            BlobServiceClient = new BlobServiceClient(azureKeys.BLOB_SERVICE_KEY);
             BlobContainerClient = BlobServiceClient.GetBlobContainerClient("home");
             BlobContainerClient.CreateIfNotExistsAsync().Wait();
+
+            comVisKey = azureKeys.COMPUTER_VISION_KEY;
 
             visionClient = ComputerVisionMethods.Authenticate(comVisKey, comVisUrl);
 
